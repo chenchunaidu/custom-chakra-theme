@@ -88,20 +88,6 @@ export default function Dashboard() {
           Button
         </Button>
       </Stack>
-      <Text>
-        Gradient solid button
-      </Text>
-      <Stack direction="row" spacing="6">
-        <Button size="sm" variant="gradientLink">
-          Button
-        </Button>
-        <Button size="md" variant="gradientLink">
-          Button
-        </Button>
-        <Button size="lg" variant="gradientLink">
-          Button
-        </Button>
-      </Stack>
 
     </Stack>
 
