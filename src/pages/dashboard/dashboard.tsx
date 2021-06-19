@@ -1,106 +1,30 @@
 import React from 'react';
 import {
-  Button, Stack, Text, IconButton,
+  Wrap, IconButton, Button,
 } from '@chakra-ui/react';
-import { MoonIcon } from '@chakra-ui/icons';
+import { SearchIcon } from '@chakra-ui/icons';
+import Demo from '../../components/demo';
 
 export default function Dashboard() {
   return (
-    <Stack>
-      <Text>
-        Outline button
-      </Text>
-      <Stack direction="row">
-        <Button size="sm">
-          Button
-        </Button>
-        <Button size="md">
-          Button
-        </Button>
-        <Button size="lg">
-          Button
-        </Button>
-      </Stack>
-      <Text>
-        Solid button
-      </Text>
-      <Stack direction="row">
-        <Button size="sm" variant="solid">
-          Button
-        </Button>
-        <Button size="md" variant="solid">
-          Button
-        </Button>
-        <Button size="lg" variant="solid">
-          Button
-        </Button>
-      </Stack>
-      <Text>
-        Ghost button
-      </Text>
-      <Stack direction="row">
-        <Button size="sm" variant="ghost">
-          Button
-        </Button>
-        <Button size="md" variant="ghost">
-          Button
-        </Button>
-        <Button size="lg" variant="ghost">
-          Button
-        </Button>
-      </Stack>
-      <Text>
-        Link button
-      </Text>
-      <Stack direction="row" spacing="6">
-        <Button size="sm" variant="link">
-          Button
-        </Button>
-        <Button size="md" variant="link">
-          Button
-        </Button>
-        <Button size="lg" variant="link">
-          Button
-        </Button>
-      </Stack>
-      <Text>
-        Unstyled button
-      </Text>
-      <Stack direction="row" spacing="6">
-        <Button size="sm" variant="unstyled">
-          Button
-        </Button>
-        <Button size="md" variant="unstyled">
-          Button
-        </Button>
-        <Button size="lg" variant="unstyled">
-          Button
-        </Button>
-      </Stack>
-      <Text>
-        Gradient solid button
-      </Text>
-      <Stack direction="row" spacing="6">
-        <Button size="sm" variant="gradientSolid">
-          Button
-        </Button>
-        <Button size="md" variant="gradientSolid">
-          Button
-        </Button>
-        <Button size="lg" variant="gradientSolid">
-          Button
-        </Button>
-      </Stack>
-      <Stack direction="row">
-        <IconButton
-          variant="gradientSolid"
-          colorScheme="teal"
-          aria-label="Call Sage"
-          fontSize="20px"
-          icon={<MoonIcon />}
-        />
-      </Stack>
-    </Stack>
+    <Wrap width="full" height="100vh" bg="gray.50" alignItems="center" p="4">
+      <Demo
+        DemoComp={Button}
+        variants={['outline',
+          'solid', 'link', 'unstyled', 'ghost', 'gradientSolid']}
+        sizes={['sm', 'md', 'lg']}
+        DemoCompChild="Button"
+        Heading="Button"
+      />
+      <Demo
+        DemoComp={IconButton}
+        variants={['outline', 'solid', 'link', 'unstyled',
+          'ghost', 'gradientSolid']}
+        sizes={['sm', 'md', 'lg']}
+        DemoCompChild={<SearchIcon />}
+        Heading="Icon Button"
+      />
+    </Wrap>
 
   );
 }
