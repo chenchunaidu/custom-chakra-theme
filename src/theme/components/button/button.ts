@@ -1,4 +1,4 @@
-export const Button = {
+const Button = {
   // The styles all button have in common
   baseStyle: {
     fontWeight: 'bold',
@@ -29,6 +29,14 @@ export const Button = {
       bg: 'purple.500',
       color: 'white',
     },
+    gradientSolid: {
+      bgGradient: 'linear(to-l, #7928CA, #FF0080)',
+      color: 'white',
+    },
+    gradientLink: {
+      bgGradient: 'linear(to-l, #7928CA, #FF0080)',
+      color: 'white',
+    },
   },
   // The default size and variant values
   defaultProps: {
@@ -36,3 +44,5 @@ export const Button = {
     variant: 'outline',
   },
 };
+
+export default Button;

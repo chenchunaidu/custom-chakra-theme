@@ -1,5 +1,8 @@
 import React from 'react';
-import { Button, Stack, Text } from '@chakra-ui/react';
+import {
+  Button, Stack, Text, IconButton,
+} from '@chakra-ui/react';
+import { MoonIcon } from '@chakra-ui/icons';
 
 export default function Dashboard() {
   return (
@@ -73,6 +76,29 @@ export default function Dashboard() {
         <Button size="lg" variant="unstyled">
           Button
         </Button>
+      </Stack>
+      <Text>
+        Gradient solid button
+      </Text>
+      <Stack direction="row" spacing="6">
+        <Button size="sm" variant="gradientSolid">
+          Button
+        </Button>
+        <Button size="md" variant="gradientSolid">
+          Button
+        </Button>
+        <Button size="lg" variant="gradientSolid">
+          Button
+        </Button>
+      </Stack>
+      <Stack direction="row">
+        <IconButton
+          variant="gradientSolid"
+          colorScheme="teal"
+          aria-label="Call Sage"
+          fontSize="20px"
+          icon={<MoonIcon />}
+        />
       </Stack>
     </Stack>
 
