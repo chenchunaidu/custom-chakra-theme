@@ -34,8 +34,8 @@ const Button = {
       color: 'white',
     },
     gradientLink: {
-      bgGradient: 'linear(to-l, #7928CA, #FF0080)',
-      color: 'white',
+      bgGradient: 'linear(to-l, #7928CA,#FF0080)',
+      bgClip: 'text',
     },
   },
   // The default size and variant values
